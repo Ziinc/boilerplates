@@ -1,8 +1,6 @@
 const esbuild = require("esbuild");
 require("dotenv").config();
 const watch = process.argv[2] ? true : false;
-console.log(process.env.SUPABASE_API_KEY)
-console.log(process.env.SUPABASE_API_URL)
 const base = {
   logLevel: "info",
   bundle: true,
@@ -12,8 +10,7 @@ const base = {
   sourceRoot: "src",
   watch,
   define: {
-    "process.env.SUPABASE_API_KEY": JSON.stringify(process.env.SUPABASE_API_KEY),
-    "process.env.SUPABASE_API_URL": JSON.stringify(process.env.SUPABASE_API_URL),
+    // "process.env.MY_ENV_VAR": JSON.stringify(process.env.MY_ENV_VAR),
   },
 };
 esbuild
