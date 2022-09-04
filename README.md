@@ -8,3 +8,5 @@ My personal project boilerplates for quickstarting projects.
 - tailwindcss, daisyui
 - typescript
 - jest
+
+👉 Read the [quickstart](./react-app/README)
