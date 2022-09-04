@@ -12,7 +12,7 @@
     "serve": "serve dist -s",
     "test": "CI=true jest tests",
     "test:watch": "bun run test -- --watchAll",
-    "check": "tsc --noEmit",
+    "check": "tsc --noEmit --preserveWatchOutput",
     "check:watch": "bun run check -- --watch",
     "start": "npm-run-all clean static css -p **:watch serve"
   },
