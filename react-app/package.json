@@ -10,7 +10,10 @@
     "build": "node ./build.js",
     "build:watch": "node ./build.js watch",
     "serve": "serve dist -s",
-    "test": "jest tests",
+    "test": "CI=true jest tests",
+    "test:watch": "bun run test -- --watchAll",
+    "check": "tsc --noEmit",
+    "check:watch": "bun run check -- --watch",
     "start": "npm-run-all clean static css -p **:watch serve"
   },
   "dependencies": {
